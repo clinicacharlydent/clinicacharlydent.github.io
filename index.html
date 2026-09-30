@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charly Dent - Clínica Odontológica Especializada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: '#5B21B6', // Violeta del logo
+                        secondary: '#4C1D95', 
+                        accent: '#8B5CF6',
+                        dark: '#1e293b',
+                        light: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #5B21B6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(30, 41, 59, 0.8), rgba(91, 33, 182, 0.7)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-light">
+
+    <!-- Top Bar -->
+    <div class="bg-primary text-white text-sm py-2 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span><i class="fa-solid fa-location-dot mr-2"></i>Av. Los Carrera 347, Quilpué</span>
+                <span><i class="fa-regular fa-clock mr-2"></i>Lun - Vie: 08:00 a 18:00 | Sáb: 08:00 a 13:00</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://instagram.com/clinicacharlydent" target="_blank" class="hover:text-accent transition"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="https://wa.me/56984745712" target="_blank" class="hover:text-accent transition"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex items-center">
+                    <img src="./.user_uploaded/media_1790731398698.jpg" alt="Charly Dent Logo" class="h-20 object-contain drop-shadow-sm">
+                </div>
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-gray-700 hover:text-primary transition font-semibold text-sm uppercase tracking-wider">Inicio</a>
+                    <a href="#nosotros" class="text-gray-700 hover:text-primary transition font-semibold text-sm uppercase tracking-wider">La Clínica</a>
+                    <a href="#servicios" class="text-gray-700 hover:text-primary transition font-semibold text-sm uppercase tracking-wider">Especialidades</a>
+                    <a href="#testimonios" class="text-gray-700 hover:text-primary transition font-semibold text-sm uppercase tracking-wider">Pacientes</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-primary transition font-semibold text-sm uppercase tracking-wider">Contacto</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/56984745712" target="_blank" class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-md font-bold transition shadow-lg shadow-primary/30 flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check"></i> Agendar Cita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-[85vh] flex items-center relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark/90 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-2xl text-white">
+                <span class="inline-block py-1 px-3 rounded-full bg-accent/20 border border-accent/50 text-accent font-semibold text-sm mb-6 backdrop-blur-sm">
+                    Odontología Especializada en Quilpué
+                </span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6">
+                    Tu sonrisa <br><span class="text-accent">nos mueve.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 font-light leading-relaxed">
+                    Transformamos vidas a través de la salud bucal. En <strong>Dentalhome Spa</strong> combinamos tecnología de vanguardia, profesionales expertos y un trato humano excepcional para brindarte la mejor experiencia odontológica.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="https://wa.me/56984745712" target="_blank" class="bg-accent hover:bg-white hover:text-primary text-white text-center px-8 py-4 rounded-md font-bold transition duration-300 shadow-xl flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Evaluación Inicial
+                    </a>
+                    <a href="#servicios" class="bg-transparent border-2 border-white hover:bg-white hover:text-dark text-white text-center px-8 py-4 rounded-md font-bold transition duration-300">
+                        Nuestros Tratamientos
+                    </a>
+                </div>
+                
+                <div class="mt-12 flex items-center gap-6">
+                    <div class="flex -space-x-4">
+                        <img class="w-12 h-12 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=1" alt="Paciente">
+                        <img class="w-12 h-12 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=2" alt="Paciente">
+                        <img class="w-12 h-12 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=3" alt="Paciente">
+                    </div>
+                    <div class="text-sm">
+                        <div class="flex text-yellow-400">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="font-medium text-white">Cientos de pacientes felices</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por Qué Elegirnos (Features) -->
+    <section class="py-16 bg-white relative -mt-10 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border-t-4 border-primary card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Especialistas Certificados</h3>
+                    <p class="text-gray-600">Nuestro equipo está compuesto por profesionales altamente capacitados en diversas áreas de la odontología.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border-t-4 border-accent card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Tecnología Avanzada</h3>
+                    <p class="text-gray-600">Utilizamos equipos e insumos de última generación para garantizar diagnósticos precisos y tratamientos sin dolor.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border-t-4 border-primary card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Atención Humana</h3>
+                    <p class="text-gray-600">Entendemos tus temores. Nos enfocamos en brindarte un ambiente relajado, tipo spa, donde tú eres la prioridad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="relative mb-12 lg:mb-0">
+                    <div class="absolute inset-0 bg-primary rounded-2xl transform translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Instalaciones de la clínica" class="relative rounded-2xl shadow-xl w-full object-cover h-[500px] z-10">
+                    <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-xl z-20 flex items-center gap-4 border-l-4 border-accent">
+                        <div class="text-4xl text-primary font-bold">10+</div>
+                        <div class="text-sm font-semibold text-gray-600 leading-tight">Años de <br>Experiencia</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-accent font-bold tracking-wider uppercase text-sm mb-2">Sobre Nosotros</h4>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-dark mb-6">Excelencia dental en el corazón de Quilpué</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        En <strong>Charly Dent - Dentalhome Spa</strong>, no solo reparamos dientes; restauramos confianza. Nacimos con la misión de cambiar la percepción tradicional de ir al dentista, ofreciendo un espacio moderno, seguro y acogedor.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Nuestro compromiso es entregarte tratamientos de alta calidad estética y funcional, asegurándonos de que cada visita sea cómoda y libre de estrés. Tu salud bucal es una inversión para toda la vida, y estamos aquí para acompañarte.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-dark font-medium"><i class="fa-solid fa-check-circle text-accent text-xl"></i> Diagnósticos integrales precisos.</li>
+                        <li class="flex items-center gap-3 text-dark font-medium"><i class="fa-solid fa-check-circle text-accent text-xl"></i> Planes de pago accesibles.</li>
+                        <li class="flex items-center gap-3 text-dark font-medium"><i class="fa-solid fa-check-circle text-accent text-xl"></i> Urgencias dentales.</li>
+                    </ul>
+                    <a href="#contacto" class="inline-block bg-dark hover:bg-primary text-white px-8 py-3 rounded-md font-bold transition">Conócenos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialidades -->
+    <section id="servicios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h4 class="text-accent font-bold tracking-wider uppercase text-sm mb-2">Nuestras Especialidades</h4>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-dark mb-6">Soluciones odontológicas integrales</h2>
+                <p class="text-gray-600 text-lg">Cubrimos todas tus necesidades dentales bajo un mismo techo, con especialistas dedicados a cada área.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 bg-white card-hover">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition duration-300 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1598256989800-fea5f6c82701?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ortodoncia" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-primary/10 text-primary p-2 rounded-lg"><i class="fa-solid fa-teeth-open"></i></div>
+                            <h3 class="text-2xl font-bold text-dark font-serif">Ortodoncia</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Alineamos tus dientes mejorando tu mordida y estética. Opciones de brackets tradicionales y estéticos.</p>
+                        <a href="https://wa.me/56984745712" class="text-primary font-bold hover:text-accent flex items-center gap-2">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 bg-white card-hover">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition duration-300 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Implantes" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-primary/10 text-primary p-2 rounded-lg"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                            <h3 class="text-2xl font-bold text-dark font-serif">Implantes de Titanio</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">La solución definitiva para dientes perdidos. Recupera la función masticatoria con total naturalidad.</p>
+                        <a href="https://wa.me/56984745712" class="text-primary font-bold hover:text-accent flex items-center gap-2">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 bg-white card-hover">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition duration-300 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1574482620826-40685ca5ebe2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Estética Dental" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-primary/10 text-primary p-2 rounded-lg"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <h3 class="text-2xl font-bold text-dark font-serif">Estética y Blanqueamiento</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Diseño de sonrisa, blanqueamiento profesional y carillas para una sonrisa de revista.</p>
+                        <a href="https://wa.me/56984745712" class="text-primary font-bold hover:text-accent flex items-center gap-2">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 bg-white card-hover">
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-2xl mb-6">
+                            <i class="fa-solid fa-tooth"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3 font-serif">Cirugía y Extracciones</h3>
+                        <p class="text-gray-600 mb-6">Extracción de terceros molares (muelas del juicio) con protocolos quirúrgicos seguros y mínimamente invasivos.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 bg-white card-hover">
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-2xl mb-6">
+                            <i class="fa-solid fa-teeth"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3 font-serif">Prótesis y Rehabilitación</h3>
+                        <p class="text-gray-600 mb-6">Coronas de porcelana, prótesis fijas y removibles fabricadas con materiales altamente estéticos.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 bg-white card-hover">
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-2xl mb-6">
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3 font-serif">Odontología General</h3>
+                        <p class="text-gray-600 mb-6">Limpiezas profundas (detartraje), tapaduras estéticas (resinas) y prevención de caries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-24 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Historias que nos mueven</h2>
+                <p class="text-primary-100 text-lg opacity-80">Lo que dicen nuestros pacientes sobre su experiencia.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-secondary/50 p-8 rounded-2xl backdrop-blur-sm border border-white/10 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-white/20 absolute top-6 right-6"></i>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-200 mb-6 italic">"Excelente atención, me saqué las muelas del juicio y no sentí absolutamente nada. El doctor muy preocupado en el postoperatorio."</p>
+                    <div class="font-bold">- Camila F., Quilpué</div>
+                </div>
+                <div class="bg-secondary/50 p-8 rounded-2xl backdrop-blur-sm border border-white/10 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-white/20 absolute top-6 right-6"></i>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-200 mb-6 italic">"Llevé a mi hijo para su tratamiento de ortodoncia y estamos maravillados con los resultados. Un equipo muy profesional y empático."</p>
+                    <div class="font-bold">- Roberto M., Villa Alemana</div>
+                </div>
+                <div class="bg-secondary/50 p-8 rounded-2xl backdrop-blur-sm border border-white/10 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-white/20 absolute top-6 right-6"></i>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-200 mb-6 italic">"Me hice un diseño de sonrisa y me cambió la vida. Las instalaciones son de primer nivel y la atención es 10/10. Recomendados al 100%."</p>
+                    <div class="font-bold">- Andrea V., Viña del Mar</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto y Mapa -->
+    <section id="contacto" class="py-0 flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 min-h-[400px]">
+            <!-- Mapa incrustado centrado en Av. Los Carrera 347, Quilpue -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x9689df9eb7c56cd7%3A0x6a1bc638641215!2sLos%20Carrera%20347%2C%20Quilpu%C3%A9%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl" width="100%" height="100%" style="border:0; min-height: 500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="w-full md:w-1/2 bg-light p-12 lg:p-24 flex flex-col justify-center">
+            <h4 class="text-accent font-bold tracking-wider uppercase text-sm mb-2">Reserva tu hora</h4>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-8">Te estamos esperando</h2>
+            
+            <ul class="space-y-6 mb-10">
+                <li class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-full flex items-center justify-center text-primary text-xl flex-shrink-0">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-dark text-lg">Dirección</h4>
+                        <p class="text-gray-600">Av. Los Carrera 347, paradero 26.<br>Quilpué, Región de Valparaíso.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-full flex items-center justify-center text-primary text-xl flex-shrink-0">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-dark text-lg">Teléfonos</h4>
+                        <p class="text-gray-600">Teléfono: 22 500 6647<br>Celular / WhatsApp: +56 9 8474 5712</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-full flex items-center justify-center text-primary text-xl flex-shrink-0">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-dark text-lg">Horario de Atención</h4>
+                        <p class="text-gray-600">Lunes a Viernes: 08:00 - 18:00 hrs.<br>Sábados: 08:00 - 13:00 hrs. <br>Domingo: Cerrado</p>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="https://wa.me/56984745712" target="_blank" class="bg-dark hover:bg-primary text-white text-center px-8 py-4 rounded-md font-bold transition duration-300 w-full sm:w-auto shadow-lg flex items-center justify-center gap-2 text-lg">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> Escríbenos por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-20 pb-10 border-t-4 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-1">
+                    <img src="./.user_uploaded/media_1790731398698.jpg" alt="Charly Dent Logo" class="h-20 bg-white rounded-lg p-2 mb-6 object-contain">
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Dentalhome Spa. Devolviendo la confianza a tus sonrisas con atención profesional, tecnología de punta y un trato cercano.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/clinicacharlydent" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-white transition text-white">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/56984745712" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-green-500 hover:text-white transition text-white">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-serif tracking-wide">Enlaces Rápidos</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#inicio" class="hover:text-accent transition">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-accent transition">Nuestra Clínica</a></li>
+                        <li><a href="#servicios" class="hover:text-accent transition">Especialidades</a></li>
+                        <li><a href="#testimonios" class="hover:text-accent transition">Testimonios</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-serif tracking-wide">Tratamientos</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#servicios" class="hover:text-accent transition">Ortodoncia</a></li>
+                        <li><a href="#servicios" class="hover:text-accent transition">Implantes</a></li>
+                        <li><a href="#servicios" class="hover:text-accent transition">Blanqueamiento</a></li>
+                        <li><a href="#servicios" class="hover:text-accent transition">Extracciones</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-serif tracking-wide">Síguenos</h4>
+                    <p class="text-gray-400 mb-4">Sigue nuestro día a día y revisa nuestros casos clínicos reales en Instagram.</p>
+                    <a href="https://instagram.com/clinicacharlydent" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-lg font-bold transition shadow-lg w-full justify-center">
+                        <i class="fa-brands fa-instagram text-xl"></i> @clinicacharlydent
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 Clínica Dental Charly Dent. Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0">Diseñado con tecnología de vanguardia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/56984745712" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-4xl shadow-2xl hover:scale-110 transition duration-300 z-50 animate-bounce group" title="Escríbenos por WhatsApp">
+        <i class="fa-brands fa-whatsapp group-hover:rotate-12 transition-transform"></i>
+    </a>
+
+</body>
+</html>
